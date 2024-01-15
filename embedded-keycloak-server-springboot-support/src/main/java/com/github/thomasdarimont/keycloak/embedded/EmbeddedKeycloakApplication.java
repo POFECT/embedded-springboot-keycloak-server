@@ -4,12 +4,14 @@ import com.github.thomasdarimont.keycloak.embedded.KeycloakCustomProperties.Admi
 import com.github.thomasdarimont.keycloak.embedded.support.SpringBootConfigProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.keycloak.Config;
+import org.keycloak.common.enums.SslRequired;
 import org.keycloak.exportimport.ExportImportConfig;
 import org.keycloak.exportimport.ExportImportManager;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakTransactionManager;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.services.managers.ApplianceBootstrap;
+import org.keycloak.services.managers.RealmManager;
 import org.keycloak.services.resources.KeycloakApplication;
 import org.springframework.core.io.Resource;
 import org.springframework.util.StringUtils;
