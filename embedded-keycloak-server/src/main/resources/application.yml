@@ -18,7 +18,7 @@ spring:
 
 server:
   forward-headers-strategy: native
-  port: 5555
+  port: 8443
   servlet:
     context-path: "/"
 
