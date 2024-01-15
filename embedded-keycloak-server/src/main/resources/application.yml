@@ -1,6 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
+    # Local
+    #url: jdbc:mariadb://localhost:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
+    # RDS
+    url: '{cipher}AQC3B6oTSFEgMbP9t/QVjfCcgtB0fXpw0WCmjPJEY9dFEq8Uh5/6gMCJStaDIlTGSsOQOQKOFdxgu6YV1qHjQhHZt33InKhn/KEpQHEeZSa11LnjxokzsaLf7p3X/V1Ny/gDjfn42PN1o4bbWO7uz3VDxNOeEBiQoAXAc/oOdQzPKtZFTs8rWUG6kSVpzCbmowMPjv/Qz3PocvfpeEboizuSPxl9b6thK5adQWi3tpjnREwENyNuKWSI1RsPnhUMTQjyfp3yqmIuOJ5t6RzF36GDv4h3uaJsRhsZK3U6lHRNRHMagRv5KaKOSyO9sggryAo3JvlEvePqqSz1v6MV2GJ4mRCIrqaP4WDT/V/ZSyaJfhapwSVfvsdA3gmEEAoRYFPt8woaeygLSMuA+02j9ekJpQv3BSUUWaOeUI3uQQG4zFnOcLkEr269UJme6H6SWoA7aCT+P8maCZqSHsCk0m6ZmaTlu2p8Ha9HnxfS0xTnP8ApOjp57ylEbWk5ElwXE4bjU4YN88XGq3zNAKvbp/mRb1ILAX4MU+NiGopzwt7Xdw=='
     username: keycloak
     password: keycloak
 #    hikari:
