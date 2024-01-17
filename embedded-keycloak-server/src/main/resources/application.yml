@@ -5,7 +5,7 @@ spring:
     # RDS
     url: jdbc:mariadb://pofect-database.c4jotwudvoiz.ap-northeast-2.rds.amazonaws.com:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
     username: keycloak
-    password: '{cipher}AQBCUA88keJYGKA2bIOy85HlrRVyZQhK0SRvGXYyHv3hh6fFyv2fHMtFnsPrFFIzMYOtTv0i+EPgWipcixmAHVDkLjkvckaWSUUSz+kI6Qui+B/YRBuigST4M4mrjlBNvwZsiKLNMUP46vluCOEGurq+IDtv3aNuPS5JsZ8ZDRYoqrkbjDC7jq6Gbv85Hql7bZ1Hz4kDMMahvDteb+1SwRT8p/liGLp2OcinbFeryf9ueV3DxDOJh9XzX2ByY+glMKcojVGgZJFbkIwFFJoRVFDOBkuo8gkLSAoP7BwdwgubECJ0WjU7vX8V8pwnOP8n1IzdSR9JmYHmIv8c7iLBmnYmbPTPvGVX7Y8eTS+qssI7IKBntbAj5C3Sa4wa/kce748='
+    password: keycloak
 #    hikari:
 #      minimum-idle: 10
 #      maximum-pool-size: 20
