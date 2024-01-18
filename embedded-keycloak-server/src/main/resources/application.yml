@@ -1,4 +1,9 @@
 spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
+        
   datasource:
     # Local
     #url: jdbc:mariadb://localhost:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
