@@ -66,8 +66,8 @@ public class EmbeddedKeycloakApplication extends KeycloakApplication {
             transaction.begin();
 
             // https disalbed
-            RealmManager manager = new RealmManager(session);
-            manager.getRealmByName("master").setSslRequired(SslRequired.NONE);
+            // RealmManager manager = new RealmManager(session);
+            // manager.getRealmByName("master").setSslRequired(SslRequired.NONE);
 
             boolean randomPassword = false;
             String password = adminUser.getPassword();
