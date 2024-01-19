@@ -1,66 +1,66 @@
-spring:
-  cloud:
-    config:
-      import-check:
-        enabled: false
+# spring:
+#   cloud:
+#     config:
+#       import-check:
+#         enabled: false
         
-  datasource:
-    # Local
-    #url: jdbc:mariadb://localhost:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
-    # RDS
-    url: jdbc:mariadb://pofect-database.c4jotwudvoiz.ap-northeast-2.rds.amazonaws.com:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
-    username: keycloak
-    password: keycloak
-#    hikari:
-#      minimum-idle: 10
-#      maximum-pool-size: 20
+#   datasource:
+#     # Local
+#     #url: jdbc:mariadb://localhost:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
+#     # RDS
+#     url: jdbc:mariadb://pofect-database.c4jotwudvoiz.ap-northeast-2.rds.amazonaws.com:3306/keycloak?characterEncoding=UTF-8&serverTimezone=UTC
+#     username: keycloak
+#     password: keycloak
+# #    hikari:
+# #      minimum-idle: 10
+# #      maximum-pool-size: 20
 
-#    username: sa
-#    url: jdbc:h2:./data/keycloak;DB_CLOSE_ON_EXIT=FALSE
-#    hikari:
-#      maximum-pool-size: 25
-#      minimum-idle: 1
+# #    username: sa
+# #    url: jdbc:h2:./data/keycloak;DB_CLOSE_ON_EXIT=FALSE
+# #    hikari:
+# #      maximum-pool-size: 25
+# #      minimum-idle: 1
 
-server:
-  forward-headers-strategy: native
-  port: 5555
-  servlet:
-    context-path: "/"
+# server:
+#   forward-headers-strategy: native
+#   port: 5555
+#   servlet:
+#     context-path: "/"
 
-logging:
-  level:
-    '[org.jgroups]': INFO
-    '[org.infinispan]': INFO
-    '[org.keycloak]': INFO
-    '[org.keycloak.services.managers.DefaultBruteForceProtector]': DEBUG
-    '[org.keycloak.services.scheduled.ClusterAwareScheduledTaskRunner]': DEBUG
-    '[org.keycloak.services.managers.UserSessionManager]': DEBUG
-    '[org.keycloak.timer.basic]': DEBUG
+# logging:
+#   level:
+#     '[org.jgroups]': INFO
+#     '[org.infinispan]': INFO
+#     '[org.keycloak]': INFO
+#     '[org.keycloak.services.managers.DefaultBruteForceProtector]': DEBUG
+#     '[org.keycloak.services.scheduled.ClusterAwareScheduledTaskRunner]': DEBUG
+#     '[org.keycloak.services.managers.UserSessionManager]': DEBUG
+#     '[org.keycloak.timer.basic]': DEBUG
 
-keycloak:
-  custom:
-    server:
-      keycloak-path: ""
+# keycloak:
+#   custom:
+#     server:
+#       keycloak-path: ""
 
-    adminUser:
-      username: admin
-      password: admin
-      create-admin-user-enabled: true
+#     adminUser:
+#       username: admin
+#       password: admin
+#       create-admin-user-enabled: true
 
-# spring:
-#   application:
-#     name: keycloak-pofect
-#   profiles:
-#     active: production
-# ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: development
-#     import: optional:configserver:http://localhost:7777
-# ---
-# spring:
-#   config:
-#     activate:
-#       on-profile: production
-#     import: optional:configserver:http://52.79.114.216:7777
+spring:
+  application:
+    name: keycloak-pofect
+  profiles:
+    active: production
+---
+spring:
+  config:
+    activate:
+      on-profile: development
+    import: optional:configserver:http://localhost:7777
+---
+spring:
+  config:
+    activate:
+      on-profile: production
+    import: optional:configserver:https://config.pofect.store
